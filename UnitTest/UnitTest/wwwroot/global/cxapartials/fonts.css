@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('/fonts/icomoon/icomoon.eot?-dq7hiw');
+    src: url('/fonts/icomoon/icomoon.eot?#iefix-dq7hiw') format('embedded-opentype'), url('/fonts/icomoon/icomoon.woff?-dq7hiw') format('woff'), url('/fonts/icomoon/icomoon.ttf?-dq7hiw') format('truetype'), url('/fonts/icomoon/icomoon.svg?-dq7hiw#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    &:before {
+        font-family: 'icomoon';
+        color: $icon_grey;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 5px;
+        font-size: 16px;
+        vertical-align: middle;
+        display: inline-block;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    &:hover::before {
+        color: $cxa_green;
+    }
+}
+
+//<span class="icon-eCart"></span>
+.icon-eCart:before {
+    content: "\e600";
+}
+
+.icon-Emp_ArrowDown:before {
+    content: "\e601";
+}
+
+.icon-Emp_ArrowRight:before {
+    content: "\e619";
+}
+
+.icon-Emp_ArrowLeft:before {
+    content: "\e61a";
+}
+
+.icon-Emp_Browse:before {
+    content: "\e602";
+}
+
+.icon-Emp_Calendar:before {
+    content: "\e603";
+}
+
+.icon-Emp_Enrol:before {
+    content: "\e604";
+}
+
+.icon-Emp_Home:before {
+    content: "\e605";
+}
+
+.icon-Emp_Information:before {
+    content: "\e606";
+}
+
+.icon-Emp_Modify:before {
+    content: "\e607";
+}
+
+.icon-Emp_MyBenefits:before {
+    content: "\e608";
+}
+
+.icon-Emp_MyClaims:before {
+    content: "\e609";
+}
+
+.icon-Emp_MyShop:before {
+    content: "\e60a";
+}
+
+.icon-Emp_MyWellness:before {
+    content: "\e60b";
+}
+
+.icon-Emp_NeedHelp:before {
+    content: "\e60c";
+}
+
+.icon-Emp_NewClaim:before {
+    content: "\e60d";
+}
+
+.icon-Emp_SubmitNewClaim:before {
+    content: "\e60e";
+}
+
+.icon-Emp_Trash:before {
+    content: "\e60f";
+}
+
+.icon-Emp_Void:before {
+    content: "\e610";
+}
+
+.icon-SubmitNewClaim:before {
+    content: "\e611";
+}
+
+.icon-Emp_Download:before {
+    content: "\e612";
+}
+
+.icon-Emp_Language:before {
+    content: "\e613";
+}
+
+.icon-Emp_Benefit_WhosCovered:before {
+    content: "\e614";
+}
+
+.icon-Emp_Print:before {
+    content: "\e626";
+}
+
+.icon-Broker_Security:before {
+    content: "\e618";
+}
+
+.icon-Broker_Entities:before {
+    content: "\e617";
+}
+
+.icon-Broker_Employees:before {
+    content: "\e616";
+}
+
+.icon-Broker_Arrangements:before {
+    content: "\e615";
+}
+
+.icon-Broker_Search:before {
+    content: "\e61b";
+}
+
+.icon-Broker_Convert:before {
+    content: "\e625";
+}
+
+.icon-Cross:before {
+    content: "\e61c";
+}
+
+.icon-Plus:before {
+    content: "\e61d";
+}
+
+.icon-Tick:before {
+    content: "\e61e";
+}
+
+.icon-Emp_Upload:before {
+    content: "\e61f";
+}
+
+.icon-Validation_Cross:before {
+    content: "\e620";
+}
+
+.icon-Validation_Tick:before {
+    content: "\e621";
+}
+
+.icon-Enrol_Questionaire:before {
+    content: "\e622";
+}
+
+.icon-minus_icon:before {
+    content: "\e623";
+}
+
+.icon-plus_icon:before {
+    content: "\e624";
+}
+
+.icon-circle:before {
+    content: "\25CF";
+}

@@ -1,0 +1,43 @@
+.checkout-table { 
+                  caption {
+                            padding: 0 (720px/1140px)*28px;
+                            }
+                   thead {
+
+                           tr > th { 
+                                     padding: (720px/1140px)*18px (720px/1140px)*28px;
+                                     }
+                          }
+
+                  tbody { 
+                          tr {
+
+                               >td {
+                                     padding: (720px/1140px)*34px (720px/1140px)*28px;
+
+                                     span, 
+                                     img { 
+                                           width: 67px;
+                                           }
+                                     }
+                              }
+                         }
+}
+
+.risk-medical-confirmation {
+                             padding: (720px/1140px)*18px (720px/1140px)*28px;
+                             margin-bottom: (720px/1140px)*40px;
+                             }
+
+.table-responsive {
+                    margin-bottom: 0;
+                    }
+
+.payment-summary {
+                   margin-top: 40px;
+                   }
+
+
+
+
+

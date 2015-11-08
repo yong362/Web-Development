@@ -1,0 +1,66 @@
+/* Style for Employee Sync */
+
+#employeesync {
+    font-size: 12px;
+    .form-control, tr:last-child > td {
+        font-size: 12px;
+    }
+    th.theader {
+        //background: url('../img/sort_both.png') no-repeat center right;
+        padding-right: 20px;
+    }
+    th, td {
+        width: auto;
+        vertical-align: middle;
+    }
+    td.hiddenRow {
+        background: #eee;
+        cursor: default;
+    }
+    .odd {
+        background-color: #f9f9f9;
+    }
+    .even {
+        background-color: #fff;
+    }
+    .row-details {
+        display: inline-block;
+        cursor: pointer;
+        width: 14px;
+        height: 14px;
+    }
+    .row-details.row-details-close {
+        background: url("../img/row-openclose.png") no-repeat 0 0;
+    }
+    .row-details.row-details-open {
+        background: url("../img/row-openclose.png") no-repeat 0 -23px;
+    }
+    .tab-pane {
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        padding: 10px;
+    }
+    .detailsInline {
+        display: inline-block;
+    }
+    .detail {
+        margin: 10px 0;
+    }
+    .detailsColumn {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .pagination>.active>a, .pagination>.active>a:hover, .pagination>.active>a:focus, .pagination>.active>span, .pagination>.active>span:hover, .pagination>.active>span:focus {
+        background-color: #EB2479;
+        border-color: #EB2479;
+        color: #fff;
+    }
+    .pagination>li>a, .pagination>li>span {
+        color: #4d4d4d;
+    }
+    #addremoveButton {
+        margin-top: 20px;
+    }
+}

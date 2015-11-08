@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="lib/dropzone/dropzone.css" />
+<div class="outer">
+    <div class="panel panel-success panel-w" style=" height:auto">
+        <div class="panel-body">
+       <h2 class="pull-left" style="margin: 25px 0px"><span class="label label-default label-test"><strong>Upload Test Documents</strong></span></h2>
+         </div>
+        <div  class="content-container">
+             <div id="fileUploaded" class="dropzone dz-clickable" data-bind="jqueryui:{ widget: 'dropzone', options:{ maxFiles: 1 , url:'https://ystest.azurewebsites.net//api/1/file/upload'} }">
+                    <div class="dz-message">
+                        <strong>Upload Unit Test Document (.xls)</strong>
+                        <br>
+                        <u>Drop files here or click to upload.</u>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+    <div class="panel panel-success panel-w" style=" height:auto">
+        <h2 class="pull-left" style="margin: 25px 0px"><span class="label label-default label-test"><strong>View Test Documents</strong></span></h2>
+        <div class="content-container">
+            <table class="table table-striped table-sortable table-curved">
+                <div class="panel-body">
+                    <!-- <div class="row"> -->
+                    <nav class=" bottompagination pull-right">
+                        <ul class="pagination pagination-md pull-right">
+                            <li data-bind="attr:{ class: $root.isPreviousPageEnabled() ? '' : 'disabled'}">
+                                <a data-bind="click: function(data, event) { $root.previousPage(data, event) }" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                            </li>
+                            <!-- ko foreach: unitDetailPages -->
+                            <li data-bind="attr:{ class: ($data == $root.pageNumber()) ? 'active' : '' }">
+                                <a href="#" data-bind="text: $data, click: function(data, event) { $root.setPage($data, data, event) }">
+                                </a>
+                            </li>
+                            <!-- /ko -->
+                            <li data-bind="attr:{ class: $root.isNextPageEnabled() ? '' : 'disabled'}">
+                                <a data-bind="click: function(data, event) { $root.nextPage(data, event) }" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- </div> -->
+                    <thead>
+                        <tr>
+                            <th style="width:150px">
+                                <center>Name</center>
+                            </th>
+                            <th style="width:150px">
+                                <center>Type</center>
+                            </th>
+                            <th style="width:150px">
+                                <center>Date Created</center>
+                            </th>
+                            <th style="width:150px">
+                                <center>Actions</center>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ko if: $root.Uresult().length === 0 -->
+                        <tr class="no-data">
+                            <td class="text-center" data-bind="attr: { colspan: 6 }" colspan="6">--There is no results to be shown here.--</td>
+                        </tr>
+                        <!-- /ko -->
+                        <!-- ko foreach: Uresult -->
+                        <tr>
+                            <td style="text-align:center;width:200px; display:none"><b> <label data-bind="text:id"></label></b></td>
+                            <td data-bind="text:name" style="text-align:center"></td>
+                            <td data-bind="text:extension" style="text-align:center"></td>
+                            <td data-bind="text:date" style="text-align:center"></td>
+                            <td class="main-cols actions" style="text-align:center">
+                                <span class="icon-Emp_Download" data-bind="click: $root.UviewDetails"></span>
+                                <span class="icon-Emp_Modify" aria-hidden="true" data-bind="click: function(data) {updateFile($data.id)}"></span>
+                                <span class="icon-Emp_Trash" aria-hidden="true" data-bind="click: $root.removePost"></span>
+                            </td>
+                        </tr>
+                        <!-- /ko -->
+                    </tbody>
+            </table>
+            </div>
+        </div>
+    </div>

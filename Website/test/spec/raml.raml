@@ -1,0 +1,1936 @@
+#%RAML 0.8
+---
+title: Auth API (TEST)
+baseUri: https://auth.cxanow.com/
+protocols: [HTTPS]
+version: 1
+mediaType: application/json
+documentation: 
+  - title: The Description of the API
+    content: |
+      This is a description
+/{path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/brokerageConfig/{objectId}?includeEntities={includeEntities}&includePending={includePending}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeEntities: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/brokerageConfig/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/brokerageConfig/approved?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/brokerageConfig/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/brokerageConfig/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/brokerageConfig/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/brokerageConfig/fields:
+  get:
+    description: 
+/api/1/brokerageConfig/file/download?filename={filename}&inTempContainer={inTempContainer}&origFilename={origFilename}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      origFilename: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/brokerageConfig/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/brokerageConfig/mine?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/brokerageConfig/myWebsiteConfig?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/brokerageConfig/pending?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/brokerageConfig/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/brokerageConfig?pendingState={pendingState}&objectIds={objectIds}&entityIds={entityIds}&sort={sort}&order={order}&offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      pendingState: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Approved
+      objectIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            name
+      order: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Asc
+      offset: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      limit: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            2147483647
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/config/forEntity/{entityId}?includePending={includePending}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/config/summaryForEntity/{entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/config/supportForEntity/{entityId}?includePending={includePending}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/flexConfig/{objectId}?includeEntities={includeEntities}&includePending={includePending}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeEntities: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/flexConfig/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig/approved?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/flexConfig/employeeList/upload?flexConfigObjectId={flexConfigObjectId}&flexPlanObjectId={flexPlanObjectId}&excelUrl={excelUrl}&effectiveDate={effectiveDate}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      flexPlanObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      excelUrl: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/employeeList?flexConfigObjectId={flexConfigObjectId}&flexPlanObjectId={flexPlanObjectId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      flexPlanObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/fields:
+  get:
+    description: 
+/api/1/flexConfig/file/download?filename={filename}&inTempContainer={inTempContainer}&origFilename={origFilename}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      origFilename: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/flexConfig/flexGroup/assign?flexConfigObjectId={flexConfigObjectId}&flexPlanObjectId={flexPlanObjectId}&flexGroupObjectId={flexGroupObjectId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      flexPlanObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      flexGroupObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          employeeIdList: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig/flexGroup/employeeList?flexConfigObjectId={flexConfigObjectId}&flexGroupName={flexGroupName}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      flexGroupName: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/flexGroup/employees/init?flexConfigObjectId={flexConfigObjectId}&flexPlanObjectId={flexPlanObjectId}&flexGroupObjectId={flexGroupObjectId}&effectiveDate={effectiveDate}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      flexPlanObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      flexGroupObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/flexGroup/reassign?flexConfigObjectId={flexConfigObjectId}&currentFlexGroupObjectId={currentFlexGroupObjectId}&newFlexGroupObjectId={newFlexGroupObjectId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      currentFlexGroupObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      newFlexGroupObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          employeeIdList: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig/flexPlan/autoAssignGroups?flexConfigObjectId={flexConfigObjectId}&flexPlanObjectId={flexPlanObjectId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      flexPlanObjectId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/mine?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/flexConfig/myWebsiteConfig?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/flexConfig/pending?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/planFields:
+  get:
+    description: 
+/api/1/flexConfig/spendingAccounts:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig/spendingAccounts/transactions?flexConfigObjectId={flexConfigObjectId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/spendingAccounts?flexConfigObjectId={flexConfigObjectId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/flexConfig/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/flexConfig?pendingState={pendingState}&objectIds={objectIds}&entityIds={entityIds}&sort={sort}&order={order}&offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      pendingState: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Approved
+      objectIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            name
+      order: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Asc
+      offset: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      limit: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            2147483647
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insuranceConfig/{objectId}?includeEntities={includeEntities}&includePending={includePending}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeEntities: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/insuranceConfig/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/insuranceConfig/approved?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insuranceConfig/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/insuranceConfig/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/insuranceConfig/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/insuranceConfig/fields:
+  get:
+    description: 
+/api/1/insuranceConfig/file/download?filename={filename}&inTempContainer={inTempContainer}&origFilename={origFilename}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      origFilename: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insuranceConfig/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/insuranceConfig/mine?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/insuranceConfig/myWebsiteConfig?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/insuranceConfig/pending?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insuranceConfig/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/insuranceConfig?pendingState={pendingState}&objectIds={objectIds}&entityIds={entityIds}&sort={sort}&order={order}&offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      pendingState: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Approved
+      objectIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            name
+      order: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Asc
+      offset: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      limit: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            2147483647
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/providerConfig/{objectId}?includeEntities={includeEntities}&includePending={includePending}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeEntities: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/providerConfig/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/providerConfig/approved?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/providerConfig/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/providerConfig/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/providerConfig/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/providerConfig/fields:
+  get:
+    description: 
+/api/1/providerConfig/file/download?filename={filename}&inTempContainer={inTempContainer}&origFilename={origFilename}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      origFilename: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/providerConfig/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/providerConfig/mine?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/providerConfig/myWebsiteConfig?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/providerConfig/pending?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/providerConfig/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/providerConfig?pendingState={pendingState}&objectIds={objectIds}&entityIds={entityIds}&sort={sort}&order={order}&offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      pendingState: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Approved
+      objectIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            name
+      order: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Asc
+      offset: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      limit: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            2147483647
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/security/entity/addChild:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          newEntity: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/security/fields?groupId={groupId}:
+  uriParameters: 
+      groupId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: 
+/api/1/security/group/{objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/security/group/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          group: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/security/group/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/security/group/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          group: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/security/group?offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/security/permission/check?resource={resource}&action={action}&entities={entities}:
+  uriParameters: 
+      resource: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      action: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      entities: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/security/permission/entities?resource={resource}&action={action}:
+  uriParameters: 
+      resource: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      action: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/security/permission/meta:
+  get:
+    description: 
+/api/1/spendingAccount/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          spendingAccountFromRequest: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/spendingAccount/delete?accountId={accountId}:
+  uriParameters: 
+      accountId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/fields?flexConfigObjectId={flexConfigObjectId}&employeeId={employeeId}:
+  uriParameters: 
+      flexConfigObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/find?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/recalculate?accountId={accountId}&reference={reference}&transactionType={transactionType}&refundReference={refundReference}&newStartDate={newStartDate}&newEndDate={newEndDate}:
+  uriParameters: 
+      accountId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      reference: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      transactionType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      refundReference: 
+        type: boolean
+        required: false
+        description: 
+        example: |
+            
+      newStartDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      newEndDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/summary/all?employeeId={employeeId}&spendingAccountConfigId={spendingAccountConfigId}&effectiveDate={effectiveDate}:
+  uriParameters: 
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      spendingAccountConfigId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/summary/transactions?spendingAccountObjectId={spendingAccountObjectId}:
+  uriParameters: 
+      spendingAccountObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/summary?accountType={accountType}&effectiveDate={effectiveDate}:
+  uriParameters: 
+      accountType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/summary?accountType={accountType}&employeeId={employeeId}&effectiveDate={effectiveDate}:
+  uriParameters: 
+      accountType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/summary?spendingAccountObjectId={spendingAccountObjectId}:
+  uriParameters: 
+      spendingAccountObjectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/terminate?employeeId={employeeId}&lastDayofService={lastDayofService}:
+  uriParameters: 
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      lastDayofService: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/spendingAccount/transaction/fields:
+  get:
+    description: 
+/api/1/spendingAccount/transaction?accountId={accountId}:
+  uriParameters: 
+      accountId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          transactionFromRequest: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/spendingAccount/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/login:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          creds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/logout:
+  post:
+    description: 
+/api/1/user/password/change:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/password/complete-reset:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/password/initiate-reset:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/password/reset-multiple:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/setLocale:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/welcome?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/user/welcome-multiple:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/welcome-website?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/websiteConfig/{objectId}?includeEntities={includeEntities}&includePending={includePending}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeEntities: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/websiteConfig/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/websiteConfig/approved?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/websiteConfig/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/websiteConfig/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/websiteConfig/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/websiteConfig/fields:
+  get:
+    description: 
+/api/1/websiteConfig/file/download?filename={filename}&inTempContainer={inTempContainer}&origFilename={origFilename}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      origFilename: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/websiteConfig/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/websiteConfig/find?clientName={clientName}&currentLocale={currentLocale}:
+  uriParameters: 
+      clientName: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      currentLocale: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/websiteConfig/mine?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/websiteConfig/myWebsiteConfig?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/websiteConfig/pending?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/websiteConfig/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/websiteConfig?pendingState={pendingState}&objectIds={objectIds}&entityIds={entityIds}&sort={sort}&order={order}&offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      pendingState: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Approved
+      objectIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            name
+      order: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Asc
+      offset: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      limit: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            2147483647
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellnessConfig/{objectId}?includeEntities={includeEntities}&includePending={includePending}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeEntities: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/wellnessConfig/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellnessConfig/approved?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellnessConfig/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellnessConfig/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          objectIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellnessConfig/delete?objectId={objectId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/wellnessConfig/fields:
+  get:
+    description: 
+/api/1/wellnessConfig/file/download?filename={filename}&inTempContainer={inTempContainer}&origFilename={origFilename}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      origFilename: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellnessConfig/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/wellnessConfig/mine?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/wellnessConfig/myWebsiteConfig?includePending={includePending}:
+  uriParameters: 
+      includePending: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/wellnessConfig/pending?agreementId={agreementId}:
+  uriParameters: 
+      agreementId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellnessConfig/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellnessConfig?pendingState={pendingState}&objectIds={objectIds}&entityIds={entityIds}&sort={sort}&order={order}&offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      pendingState: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Approved
+      objectIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            name
+      order: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            Asc
+      offset: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      limit: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            2147483647
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 

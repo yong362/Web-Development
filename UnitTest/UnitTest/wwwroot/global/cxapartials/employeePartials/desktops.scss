@@ -1,0 +1,107 @@
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+  /* jQuery UI Spinner */
+  .ui-spinner {
+
+                .ui-icon-triangle-1-n,
+                .ui-icon-triangle-1-s {
+                                        right: 22px;
+                                        }
+  }
+
+  /* Bootstrap Modal */
+
+  .modal-stretch {
+                  width: 970px;/* in accordance to Bootstrap's .container, so it fits the width of the contnet  */
+                  }
+  
+  .need-help { 
+               position: absolute;
+               right: 0;
+               top: 0;
+
+               a { 
+                   padding: 0;
+                   border: 0;
+                   }
+             }
+
+    .table-responsive {
+                      border: 0;
+                      }
+
+    .checkout-table { 
+                    thead {
+                            background-color: $lightgrey2;
+
+                            tr > th { 
+                                      padding: 18px 28px;
+                                      }
+                          }
+
+                   tbody { 
+                           >tr {
+                                 
+                                 >td {
+                                       padding: 34px 28px;
+
+                                       span, 
+                                       img { 
+                                             width: 100%;
+                                             }
+                                       }
+                                }
+                         }
+                    }
+
+.risk-medical-confirmation {
+                             padding: 18px 28px;
+                             margin-bottom: 40px;
+                             }
+
+#checkout-summary {
+                    padding-bottom: 20px;
+                    }
+
+.payment-summary {
+                   margin-top: 20px;
+
+                   h3 {
+                        margin: 10px 0;
+                        }
+
+                   h3 + div {
+                              margin-top: -10px;
+                              padding-right: 0;
+                              text-align: right;                              
+                              
+                              > div {
+                                      margin-top: -18px;
+                                      
+                                      strong {
+                                               display: table-cell;
+                                               vertical-align: bottom;
+                                               height: 38px;
+                                               position: relative;
+                                               top: -10px;
+
+                                               &.benefits {
+                                                            right: -27px;
+                                                            }
+
+                                               &.total {
+                                                         right: -64px;
+                                                         }
+                                               }
+                                      }
+                              }
+
+
+}
+  
+}/* ends media query */
+
+
+
+

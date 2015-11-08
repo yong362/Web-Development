@@ -1,0 +1,47 @@
+$.get('/gauge/viewmodels/unit/TEST.xml', function(xml) {
+        var json = $.xml2json(xml);
+        var count = Object.keys(json.testsuite).length;
+        var passes = 0;
+        for (i; i < count; i++) {
+            var test = json.testsuite[i].name,
+                failure = json.testsuite[i].failures,
+                time = json.testsuite[i].timestamp,
+                message;
+            console.log(failure);
+            if (failure === "1") {
+                message = json.testsuite[i].testcase.failure.message
+            } else {
+                message = 'N/A';
+                passes++;
+            }
+            var validation;
+            if (failure === "0") {
+                validation = "glyphicon glyphicon-ok";
+
+            } else if (failure === "1") {
+
+                validation = "glyphicon glyphicon-remove";
+            }
+
+            result.push({
+                name: test,
+                failures: validation,
+                reason: message,
+                timestamp: time
+            });
+
+
+        };
+
+        var config3 = liquidFillGaugeDefaultSettings();
+        config3.textVertPosition = 0.8;
+        config3.waveAnimateTime = 5000;
+        config3.waveHeight = 0.15;
+        config3.waveAnimate = false;
+        config3.waveOffset = 0.25;
+        config3.valueCountUp = false;
+        config3.displayPercent = false;
+        loadLiquidFillGauge("unitAuth", calculatePercentage(passes, count), config3);
+        console.log(count);
+
+    });

@@ -1,0 +1,38 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Enter Message</h3>
+        </div>
+        <div class="modal-body">
+            <form data-bind="submit: ok" id="msgForm">
+                <center>
+                    <label style="font-size:16px; color:#d43f3a;"> Those with asterisk are required fields</label>
+                </center>
+                <br/>
+                <label>Name: </label>
+                <!-- ko if: input() == '' -->
+                <span style="color:#d14;">*</span>
+                <!-- /ko -->
+                <!-- ko if: input().toLowerCase() == 'system' -->
+                <span style="color:#d14;" data-bind="text: input() + ', ' + 'is not allowed!'"></span>
+                <!-- /ko -->
+                <input type="text" data-bind="value: input, valueUpdate: 'afterkeydown'" class="form-control autofocus" />
+                <label for="c1">Select Category: </label>
+                <!-- ko if: selectedValue() == '1' -->
+                <span style="color:#d14;">*</span>
+                <!-- /ko -->
+                <select class="form-control" data-bind="foreach: dCategory, value: selectedValue ,valueUpdate: 'afterkeydown'">
+                    <option data-bind="attr: { disabled: ctID == '1', selected: ctID == '1' , value: ctID }, text: dName"></option>
+                </select>
+                <label>Message: </label>
+                <!-- ko if: message() == '' -->
+                <span style="color:#d14;">*</span>
+                <!-- /ko -->
+                <textarea data-bind="value: message, valueUpdate: 'afterkeydown'" class="form-control autofocus" name="tMessage" form="msgForm"></textarea>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-green" type="submit" data-bind="click: ok ,enable:  input() !== '' && input().toLowerCase() !== 'system'  && message() !== '' && selectedValue()!== '1' " data-placement="top" id="btnSubmit" disabled="true">Submit</button>
+            <button class="btn btn-green" data-bind="click: cancel">Cancel</button>
+        </div </div>
+    </div>

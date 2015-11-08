@@ -1,0 +1,44 @@
+/* Medium devices (wider desktops, 1200px and up) */
+
+@media (min-width: $screen-lg-min) {
+    /* jQuery UI Spinner */
+    
+    .ui-spinner {
+        .ui-icon-triangle-1-n, .ui-icon-triangle-1-s {
+            right: 35px;
+        }
+    }
+    /* Bootstrap Modal */
+    
+    .modal-stretch {
+        width: 1170px;
+        /* in accordance to Bootstrap's .container, so it fits the width of the contnet  */
+    }
+    .payment-summary {
+        h3 {
+            padding-left: 0;
+            margin: 0 0 20px;
+            + div {
+                margin-top: 0;
+                padding-right: 0;
+                &.col-md-8 {
+                    padding-right: 0;
+                }
+                > div {
+                    margin-top: -38px;
+                    strong {
+                        &.total {
+                            right: -46px;
+                        }
+                    }
+                    &.col-sm-4 {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        .employee-payable {
+            padding: 15px 0 5px;
+        }
+    }
+}

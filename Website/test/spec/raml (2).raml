@@ -1,0 +1,639 @@
+#%RAML 0.8
+---
+title: Entity API (TEST)
+baseUri: https://entity-api.cxanow.com/
+protocols: [HTTPS]
+version: 1
+mediaType: application/json
+documentation: 
+  - title: The Description of the API
+    content: |
+      This is a description
+/{path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/customerEntity/{entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/customerEntity/{parentEntityId}/child-entities?offset={offset}&limit={limit}:
+  uriParameters: 
+      parentEntityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/customerEntity/allfields?offset={offset}&limit={limit}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/customerEntity/search/{keyword}?offset={offset}&limit={limit}:
+  uriParameters: 
+      keyword: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/customerEntity?offset={offset}&limit={limit}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          paramsData: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/entity/{entityId}?includeAllFields={includeAllFields}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      includeAllFields: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/entity/{parentEntityId}/child-entities?offset={offset}&limit={limit}&keyword={keyword}&relatedTo={relatedTo}&entityIds={entityIds}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      parentEntityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      relatedTo: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/accept:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/entity/accepted?objectId={objectId}&offset={offset}&limit={limit}:
+  uriParameters: 
+      objectId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/bulkUpdateGroupName:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/entity/byOwnerId?offset={offset}&limit={limit}&parentEntityId={parentEntityId}&keyword={keyword}&relatedTo={relatedTo}&minDepth={minDepth}&maxDepth={maxDepth}&entityIds={entityIds}&groupName={groupName}&ownerId={ownerId}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      parentEntityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      relatedTo: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      minDepth: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      maxDepth: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      groupName: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      ownerId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/create:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/entity/decline:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/entity/declined?objectId={objectId}&offset={offset}&limit={limit}:
+  uriParameters: 
+      objectId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/fields:
+  get:
+    description: 
+/api/1/entity/file/download?filename={filename}&inTempContainer={inTempContainer}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+  get:
+    description: 
+/api/1/entity/file/upload?inTempContainer={inTempContainer}:
+  uriParameters: 
+      inTempContainer: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+  post:
+    description: 
+/api/1/entity/getByObjectId/{objectId}?includeAllFields={includeAllFields}&includePendingChanges={includePendingChanges}&latestChangeId={latestChangeId}:
+  uriParameters: 
+      objectId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      includeAllFields: 
+        type: string
+        required: true
+        description: 
+        example: |
+            True
+      includePendingChanges: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      latestChangeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: 
+/api/1/entity/myEntity:
+  get:
+    description: 
+/api/1/entity/pending/summary?objectId={objectId}&offset={offset}&limit={limit}:
+  uriParameters: 
+      objectId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/pending?objectId={objectId}&offset={offset}&limit={limit}:
+  uriParameters: 
+      objectId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/search/{keyword}?offset={offset}&limit={limit}&parentEntityId={parentEntityId}&relatedTo={relatedTo}&minDepth={minDepth}&maxDepth={maxDepth}&entityIds={entityIds}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      parentEntityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      relatedTo: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      minDepth: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      maxDepth: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entity/tagEntitiesAsType?configType={configType}&configId={configId}:
+  uriParameters: 
+      configType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      configId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/entity/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/entity/uploadcontacts:
+  post:
+    description: 
+/api/1/entity/uploadentities:
+  post:
+    description: 
+/api/1/entity?offset={offset}&limit={limit}&includeAllFields={includeAllFields}&includePending={includePending}&includeDraft={includeDraft}&parentEntityId={parentEntityId}&keyword={keyword}&relatedTo={relatedTo}&minDepth={minDepth}&maxDepth={maxDepth}&entityIds={entityIds}&groupName={groupName}&ownerId={ownerId}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      includeAllFields: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includePending: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      includeDraft: 
+        type: string
+        required: true
+        description: 
+        example: |
+            False
+      parentEntityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      relatedTo: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      minDepth: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      maxDepth: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      groupName: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      ownerId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/entitygroup?offset={offset}&limit={limit}&keyword={keyword}:
+  uriParameters: 
+      offset: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      limit: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/BlobFiles?path={path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/NotFound?path={path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 

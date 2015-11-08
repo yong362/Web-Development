@@ -1,0 +1,45 @@
+﻿<div>
+    <div class="sidebar">
+        <div class="mobileMenu-Bar slide-in ">
+            <a class="navbar-brand h-Text">
+                <center><img src="global/img/cxa-logo-n1.png" /></center>
+            </a>
+             <div class="mobileMenuButton">
+                    <button type="button" data-bind="click: function(data, event) { mobileMenuToggle() }" class="btn btn-default btn-sm mobileButtonIcon">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
+                </div>
+        </div>
+        <div class="mobileMenuLink">
+            <ul class="nav nav-sidebar" data-bind="foreach: router.navigationModel">
+                <li data-bind="css: { active: isActive }">
+                    <a data-bind="attr: { href: hash }, text: title, css: icon"></a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="navbar-nav navbar-left" style="list-style-type: none;">
+                <li class="loader" data-bind="css: { active: router.isNavigating }">
+                    <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="position: relative; float: right; top: 10px; z-index: 99999; width: 80%;">
+        <div class="alert alert-danger" role="alert" style="display:none;">Oops, Something went wrong!</div>
+    </div>
+    <div class="page-host" data-bind="router">
+    </div>
+    <!-- <footer id="main-footer" class="footer">
+    <div class="col-md-12">
+        <div class="col-md-9">
+            <span class="copyright">Copyright </span>
+        </div>
+        <div class="col-md-3 text-center">
+            <span>Powered by<img id="powered_by_img"src="/img/Icon_Emp_CXAlogo.png">
+            </span>
+        </div>
+    </div>
+</footer> -->
+</div>

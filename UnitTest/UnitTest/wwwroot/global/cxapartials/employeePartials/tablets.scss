@@ -1,0 +1,70 @@
+/* Small devices (tablets, 768px and up) */
+/* Based on Bootstrap */
+
+@media (min-width: $screen-sm-min) {
+    /* Bootstrap Modal */
+    
+    .modal-stretch {
+        width: 750px;
+        /* in accordance to Bootstrap's .container, so it fits the width of the contnet  */
+    }
+    .need-help {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        z-index: 1;
+        a {
+            border: 1px solid $lightgrey1;
+            background-color: #fff;
+            padding: 10px;
+            display: inline-block;
+        }
+    }
+    .payment-summary {
+        .employee-payable {
+            padding-bottom: 50px;
+        }
+        .checkout-btn-wrapper {
+            text-align: center;
+        }
+        h3 {
+            + div {
+                > div {
+                    strong {
+                        &.benefits {
+                            right: -38px;
+                        }
+                        &.total {
+                            right: -59px;
+                        }
+                    }
+                    &:first-child {
+                        color: $green;
+                    }
+                    + div {
+                        color: $hotpink;
+                    }
+                    &:last-child {
+                        color: $black1;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        /* ends h3 */
+        
+        .employer-payable, .employee-payable {
+            strong {
+                visibility: hidden;
+            }
+        }
+        .employee-payable {
+            border-top: 1px solid $lightgrey3;
+            padding-bottom: 20px;
+            h3, span {
+                color: $leather;
+            }
+        }
+    }
+}

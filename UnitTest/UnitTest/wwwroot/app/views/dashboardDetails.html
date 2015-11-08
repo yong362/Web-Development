@@ -1,0 +1,88 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-bind="click: Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Compare Results Details</h4>
+        </div>
+        <div class="modal-body modal-height" style="overflow-y:auto">
+            <div class="col-md-6">
+                <table class="table table-striped table-sortable table-curved" id="dialogTable">
+                    <center>
+                        <h4>Current :<span data-bind="text:dateC"></span></h4></center>
+                    <thead>
+                        <th style="width:125px;">
+                            <center>Tests Name</center>
+                        </th>
+                        <th>Results
+                            <br/><span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="color: #4cae4c;"></span> | <span class="glyphicon glyphicon-remove-sign" aria-hidden="true" style="color: #d14;"></span>
+                        </th>
+                        <th style="width:250px;">Reason</th>
+                    </thead>
+                    <tbody>
+                        <!-- ko if: $root.CurrentResult().length === 0 -->
+                        <tr class="no-data">
+                            <td class="text-center" data-bind="attr: { colspan: 6 }" colspan="6">There is no results to be shown here.</td>
+                        </tr>
+                        <!-- /ko -->
+                        <!-- ko foreach: CurrentResult -->
+                        <tr>
+                            <td data-bind="text:name"></td>
+                            <td>
+                                <center><span data-bind="css:failure"></span></center>
+                            </td>
+                            <!-- ko if: reason != "N/A" -->
+                            <td><span data-bind="html:reason"></span></td>
+                            <!-- /ko -->
+                            <!-- ko if: reason == "N/A" -->
+                            <td>
+                                <center><span data-bind="html:reason"></span></center>
+                            </td>
+                            <!-- /ko -->
+                        </tr>
+                        <!-- /ko -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-striped table-sortable table-curved" id="dialogTable">
+                    <center>
+                        <h4>Previous:<span data-bind="text:dateP"></span></h4></center>
+                    <thead>
+                        <th style="width:125px;">
+                            <center>Tests Name</center>
+                        </th>
+                        <th>Results
+                            <br/><span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="color: #4cae4c;"></span> | <span class="glyphicon glyphicon-remove-sign" aria-hidden="true" style="color: #d14;"></span>
+                        </th>
+                        <th style="width:250px;">Reason</th>
+                    </thead>
+                    <tbody>
+                        <!-- ko if: $root.previousResult().length === 0 -->
+                        <tr class="no-data">
+                            <td class="text-center" data-bind="attr: { colspan: 6 }" colspan="6">There is no previous results to be shown here.</td>
+                        </tr>
+                        <!-- /ko -->
+                        <!-- ko foreach: previousResult -->
+                        <tr>
+                            <td data-bind="text:name"></td>
+                            <td>
+                                <center><span data-bind="css:failure"></span></center>
+                            </td>
+                            <!-- ko if: reason != "N/A" -->
+                            <td><span data-bind="html:reason"></span></td>
+                            <!-- /ko -->
+                            <!-- ko if: reason == "N/A" -->
+                            <td>
+                                <center><span data-bind="html:reason"></span></center>
+                            </td>
+                            <!-- /ko -->
+                        </tr>
+                        <!-- /ko -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->

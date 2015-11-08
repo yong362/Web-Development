@@ -1,0 +1,86 @@
+﻿<div class="outer">
+    <div style="height:auto;" class="panel panel-success panel-w">
+        <!--  <div class="panel-heading">
+            <center>
+                <h3 class="panel-title"><strong>Notifications</strong></h3></center>
+        </div> -->
+        <div class="panel-body" style="height:auto;">
+            <h2 class="pull-left" style="margin: 25px 0px"><span class="label label-default label-test"><strong>Messages</strong></span></h2>
+            <div>
+                <div class="col-md-6 pull-right">
+                    <div class="pull-right" style="padding:5px;">
+                        <span class="icon-plus_icon link_with_icon icon_emphasize" data-bind="click:showCustomModal">Create</span>
+                        <span class="icon-minus_icon link_with_icon icon_emphasize" data-bind="click:removeAllPost,visible: $root.people().length > 0"> Clear</span>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <table class="table table-striped table-sortable table-curved">
+                        <div class="col-md-12 content-container">
+                            <div class="pull-left">
+                                <span class="pull-left" style="margin:5px;">Search </span>
+                            </div>
+                            <div class="pull-left">
+                                <div class="input-append">
+                                    <form>
+                                        <input class="form-control" id="search" type="search" name="search" data-bind="value: filter" placeholder="Type to filter messages">
+                                    </form>
+                                    <span class=""></span>
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <nav class=" bottompagination pull-right">
+                                    <ul class="pagination pagination-md pull-right">
+                                        <li data-bind="attr:{ class: $root.isPreviousPageEnabled() ? '' : 'disabled'}">
+                                            <a data-bind="click: function(data, event) { $root.previousPage(data, event) }" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                                        </li>
+                                        <!-- ko foreach: unitDetailPages -->
+                                        <li data-bind="attr:{ class: ($data == $root.pageNumber()) ? 'active' : '' }">
+                                            <a href="#" data-bind="text: $data, click: function(data, event) { $root.setPage($data, data, event) }">
+                                            </a>
+                                        </li>
+                                        <!-- /ko -->
+                                        <li data-bind="attr:{ class: $root.isNextPageEnabled() ? '' : 'disabled'}">
+                                            <a data-bind="click: function(data, event) { $root.nextPage(data, event) }" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <thead>
+                            <tr>
+                                <th>Created By</th>
+                                <th>Created On</th>
+                                <th>Message</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ko if: $root.people().length === 0 -->
+                            <tr class="no-data">
+                                <td class="text-center" data-bind="attr: { colspan: 6 }" colspan="6">-- There is no Messages to be shown here. --</td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko foreach: people -->
+                            <tr>
+                                <td data-bind="text:pid" style="display:none;"> </td>
+                                <td data-bind="text:rid" style="display:none;"> </td>
+                                <td data-bind="text: name , style: { color: rid !== undefined ? '#d14  ' : 'black' }"></td>
+                                <td data-bind="text: createdOn"></td>
+                                <td data-bind="text: message"></td>
+                                <td>
+                                    <center><span data-bind="css: selectedValue, attr:{title:title}" style="cursor:pointer" data-toggle="tooltip" data-placement="left"></span></center>
+                                </td>
+                                <td class="main-cols actions">
+                                    <span class="icon-Emp_Browse" aria-hidden="true" data-bind="visible: rid !== undefined ,click: function(data) {viewDetails($data.rid)}"></span>
+                                    <span class="icon-Emp_Void" aria-hidden="true" data-bind="click: function(data) {removePost($data.pid)}"></span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

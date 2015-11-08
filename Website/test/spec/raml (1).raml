@@ -1,0 +1,2696 @@
+#%RAML 0.8
+---
+title: Flex API (TEST)
+baseUri: https://flex-api.cxanow.com/
+protocols: [HTTPS]
+version: 1
+mediaType: application/json
+documentation: 
+  - title: The Description of the API
+    content: |
+      This is a description
+/{path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/checkout/benefits/items:
+  get:
+    description: 
+/api/1/checkout/order:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          agreement: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/checkout/summary:
+  get:
+    description: 
+/api/1/checkout/wellness/items:
+  get:
+    description: 
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          item: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/checkout/wellness/items/{itemId}:
+  uriParameters: 
+      itemId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  delete:
+    description: 
+  patch:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          item: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/claim/delete?claimKey={claimKey}:
+  uriParameters: 
+      claimKey: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/claim/deleteGHS?claimAppliedId={claimAppliedId}&claimKey={claimKey}:
+  uriParameters: 
+      claimAppliedId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimKey: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/claim/deleteInsurance?claimAppliedId={claimAppliedId}&updateCR={updateCR}&claimKey={claimKey}:
+  uriParameters: 
+      claimAppliedId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      updateCR: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimKey: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/claim/exportClaims?type={type}&planId={planId}:
+  uriParameters: 
+      type: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      planId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/form?planId={planId}&claimItemId={claimItemId}:
+  uriParameters: 
+      planId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimItemId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/ghssettlement?claimSettlementKey={claimSettlementKey}:
+  uriParameters: 
+      claimSettlementKey: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/history?planId={planId}:
+  uriParameters: 
+      planId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/pending:
+  get:
+    description: 
+/api/1/claim/print?claimKey={claimKey}&type={type}:
+  uriParameters: 
+      claimKey: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      type: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/statement?planId={planId}&periodEnd={periodEnd}&memberKey={memberKey}&memberType={memberType}&account={account}:
+  uriParameters: 
+      planId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      periodEnd: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+      memberKey: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      memberType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      account: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/submission?planId={planId}:
+  uriParameters: 
+      planId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/claim/summary?planId={planId}:
+  uriParameters: 
+      planId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/client/{companyId}/public-settings:
+  uriParameters: 
+      companyId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/employee/benefitDocuments:
+  get:
+    description: 
+/api/1/employee/benefitEnrolment:
+  get:
+    description: 
+/api/1/employee/benefits:
+  get:
+    description: 
+/api/1/employee/dashboard:
+  get:
+    description: 
+/api/1/employee/profile:
+  get:
+    description: 
+/api/1/employeeCensus/approve:
+  post:
+    description: Approve the changes.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          keyList: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/approved?entityId={entityId}&employeeId={employeeId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the approved changes listing.
+/api/1/employeeCensus/approvedGroupByEmployeeId?entityId={entityId}&employeeId={employeeId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the approved changes group by employee Id.
+/api/1/employeeCensus/benefit/create?entityId={entityId}&employeeId={employeeId}&benefitType={benefitType}&dependantId={dependantId}&evidenceUrl={evidenceUrl}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      benefitType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  post:
+    description: Create new benefit for employee or dependant.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          values: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/benefit/delete?entityId={entityId}&employeeId={employeeId}&benefitId={benefitId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}&dependantId={dependantId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      benefitId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Delete the existing benefit.
+/api/1/employeeCensus/benefit/fields?entityId={entityId}&benefitType={benefitType}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      benefitType: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: Get benefit fields meta data.
+/api/1/employeeCensus/benefit/types?entityId={entityId}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: Get benefit type list.
+/api/1/employeeCensus/benefit/update?entityId={entityId}&employeeId={employeeId}&benefitId={benefitId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}&dependantId={dependantId}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      benefitId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  post:
+    description: Update the existing benefit.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          values: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/benefits?entityId={entityId}&employeeId={employeeId}&dependantId={dependantId}&sort={sort}&order={order}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      sort: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            fkEmployee
+      order: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            asc
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: Get the benefit listing of the employee and Dependant.
+/api/1/employeeCensus/benefitsSummary/me:
+  get:
+    description: 
+/api/1/employeeCensus/clientID?entityId={entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Get the client id by entity Id.
+/api/1/employeeCensus/compareUpload?entityId={entityId}&attachmentFileUrl={attachmentFileUrl}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      attachmentFileUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  post:
+    description: Compare the upload data for the changes.
+/api/1/employeeCensus/dependant/{dependantId}?entityId={entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependantId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Get the dependant details by the dependant Id.
+/api/1/employeeCensus/dependant/BManagerSync?entityId={entityId}&values={values}&bmgr_auth_token={bmgr_auth_token}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      values: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      bmgr_auth_token: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Sync the BManager dependant to employee census.
+/api/1/employeeCensus/dependant/create?entityId={entityId}&employeeId={employeeId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Create new dependant.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          value: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/dependant/delete?entityId={entityId}&dependantId={dependantId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Delete the existing dependant.
+/api/1/employeeCensus/dependant/fields?entityId={entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get dependant fields meta data.
+/api/1/employeeCensus/dependant/me?sort={sort}&order={order}:
+  uriParameters: 
+      sort: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            pkDependant
+      order: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            asc
+  get:
+    description: Get dependant listing of the login employee.
+/api/1/employeeCensus/dependant/update?entityId={entityId}&dependantId={dependantId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Update the existing dependant.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          values: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/dependant?dependantIdList={dependantIdList}&entityId={entityId}:
+  uriParameters: 
+      dependantIdList: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get Dependants by dependant list
+/api/1/employeeCensus/dependant?entityId={entityId}&employeeId={employeeId}&sort={sort}&order={order}&changeId={changeId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      sort: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            pkDependant
+      order: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            asc
+      changeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the dependant listing by employee Id.
+/api/1/employeeCensus/downloadTemplate?entityId={entityId}&templateId={templateId}&withData={withData}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      templateId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      withData: 
+        type: boolean
+        required: true
+        description: 
+        example: |
+            False
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: Download template for upload.
+/api/1/employeeCensus/downloadValidationSummary?entityId={entityId}&summaryFile={summaryFile}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      summaryFile: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Download validation summary after uploading.
+/api/1/employeeCensus/employee:
+  post:
+    description: Get employees by entity IDs
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          entityIds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/employee/{employeeId}?entityId={entityId}&changeId={changeId}:
+  uriParameters: 
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      changeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the employee detail by employee Id.
+/api/1/employeeCensus/employee/columns?entityId={entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get employee default columns for employee listing.
+/api/1/employeeCensus/employee/create?entityId={entityId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Create a new employee.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          values: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/employee/createRoot:
+  post:
+    description: Create root employee.
+/api/1/employeeCensus/employee/delete?entityId={entityId}&employeeId={employeeId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Delete the existing employee.
+/api/1/employeeCensus/employee/fields?entityId={entityId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get employee fields meta
+/api/1/employeeCensus/employee/me:
+  get:
+    description: Get the employee detail of the login employee.
+/api/1/employeeCensus/employee/update?entityId={entityId}&employeeId={employeeId}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Update the existing employee.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          values: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/employee?employeeIdList={employeeIdList}&entityId={entityId}:
+  uriParameters: 
+      employeeIdList: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the employee details by multiple employee Id.
+/api/1/employeeCensus/employee?entityId={entityId}&pageSize={pageSize}&pageNumber={pageNumber}&sort={sort}&order={order}&keyword={keyword}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      pageSize: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            10
+      pageNumber: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      sort: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            pkEmployee
+      order: 
+        type: string
+        required: true
+        description: need to remove if empty
+        example: |
+            asc
+      keyword: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the employee listing.
+/api/1/employeeCensus/getTemplateList:
+  get:
+    description: Get the download template list.
+/api/1/employeeCensus/pending?entityId={entityId}&employeeId={employeeId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the pending changes listing.
+/api/1/employeeCensus/pendingForApprove:
+  post:
+    description: Pending for apporve changes.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          value: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/pendingGroupByEmployeeId?entityId={entityId}&employeeId={employeeId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the pending changes group by employee Id.
+/api/1/employeeCensus/reject:
+  post:
+    description: Reject the changes.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          keyList: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/employeeCensus/upload?entityId={entityId}&url={url}&effectiveDate={effectiveDate}&evidenceUrl={evidenceUrl}&placementId={placementId}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      url: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      evidenceUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  post:
+    description: Upload the employee census data
+/api/1/enrolment/active?employeeId={employeeId}:
+  uriParameters: 
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/enrolment/checkout/me:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          benefitEnrolmentSelections: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/enrolment/isActiveEnrolment/me:
+  get:
+    description: 
+/api/1/enrolment/isActiveEnrolment?employeeId={employeeId}:
+  uriParameters: 
+      employeeId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/enrolment/open?selectionStart={selectionStart}&selectionEnd={selectionEnd}&entityIds={entityIds}&placementIds={placementIds}&employeeIds={employeeIds}&effectiveDate={effectiveDate}:
+  uriParameters: 
+      selectionStart: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+      selectionEnd: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/enrolment/process?employeeId={employeeId}&entityIds={entityIds}:
+  uriParameters: 
+      employeeId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/enrolment/selectionData/me:
+  get:
+    description: 
+/api/1/file/upload:
+  post:
+    description: 
+/api/1/hrportal/activities:
+  get:
+    description: 
+/api/1/hrportal/attendees/{eventId}:
+  uriParameters: 
+      eventId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/hrportal/attendees/{eventId}/csvdownload:
+  uriParameters: 
+      eventId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/hrportal/attendees/{eventId}/txtdownload:
+  uriParameters: 
+      eventId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/hrportal/signups/{eventId}:
+  uriParameters: 
+      eventId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/hrportal/signups/{eventId}/csvdownload:
+  uriParameters: 
+      eventId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/hrportal/signups/{eventId}/txtdownload:
+  uriParameters: 
+      eventId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insurer/employeelist?brokerConfigId={brokerConfigId}&ELType={ELType}&placementId={placementId}&insurerCode={insurerCode}:
+  uriParameters: 
+      brokerConfigId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      ELType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      insurerCode: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Download the employee census information for a specific placement and insurer.  Used in the EE sync page of the e2e portal.  Combines employee, dependant and benefit information
+/api/1/insurer/employeelisting-convert?listId={listId}&ELType={ELType}:
+  uriParameters: 
+      listId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      ELType: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insurer/employeelistinginfo?brokerConfigId={brokerConfigId}&pageSize={pageSize}&pageNumber={pageNumber}:
+  uriParameters: 
+      brokerConfigId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      pageSize: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            1
+      pageNumber: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            1
+  get:
+    description: 
+/api/1/insurer/generateemployeelistdelta:
+  get:
+    description: Generate the list of changes rows of employee census information for all placements and insurers.  Used in the EE sync page of the e2e portal.  Combines employee, dependant and benefit information
+/api/1/insurer/getfile?file={file}:
+  uriParameters: 
+      file: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insurer/insurerplacementinfo?brokerConfigId={brokerConfigId}:
+  uriParameters: 
+      brokerConfigId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/insurer/listing:
+  get:
+    description: Get Insuer Listing
+/api/1/insurer/movementinfo?insurerName={insurerName}&pageSize={pageSize}&pageNumber={pageNumber}:
+  uriParameters: 
+      insurerName: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      pageSize: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            1
+      pageNumber: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            1
+  get:
+    description: 
+/api/1/library/doc:
+  get:
+    description: 
+/api/1/library/doc/{encodedContentId}:
+  uriParameters: 
+      encodedContentId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/menu/broker:
+  get:
+    description: 
+/api/1/menu/employee:
+  get:
+    description: 
+/api/1/menu/profile:
+  get:
+    description: 
+/api/1/placement/benefit/assign:
+  post:
+    description: Assign the benefit/plans to employees.
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          assignments: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/placement/benefit/download?entityIds={entityIds}&placementIds={placementIds}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Download the template for mass employee plan assignments.
+/api/1/placement/benefit/fields?entityIds={entityIds}&placementIds={placementIds}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Get the emp/benefit fields meta data for plan assignment.
+/api/1/placement/benefit/fields?placementIds={placementIds}:
+  uriParameters: 
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Get the benefit fields meta data.
+/api/1/placement/benefit/types/me?entityId={entityId}&dependantId={dependantId}&incurredDate={incurredDate}&benefitType={benefitType}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependantId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      incurredDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      benefitType: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the emp own's benefit type/claim type listing by the incurred date/benefit type and emp's selected plan.
+/api/1/placement/benefit/types?entityId={entityId}&employeeId={employeeId}&dependantId={dependantId}&incurredDate={incurredDate}&benefitType={benefitType}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      employeeId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      dependantId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      incurredDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      benefitType: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the benefit type/claim type listing by the incurred date/benefit type and emp's selected plan.
+/api/1/placement/benefit/types?entityIds={entityIds}&placementIds={placementIds}&benefitType={benefitType}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      benefitType: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the benefit type/plan listing.
+/api/1/placement/benefit/upload?entityIds={entityIds}&placementIds={placementIds}&excelUrl={excelUrl}&effectiveDate={effectiveDate}&isOverwrite={isOverwrite}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      excelUrl: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      isOverwrite: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Upload the employee benefit plan assignments.
+/api/1/placement/benefit/view?entityIds={entityIds}&placementIds={placementIds}&pageSize={pageSize}&pageNumber={pageNumber}&sort={sort}&order={order}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      pageSize: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            10
+      pageNumber: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      sort: 
+        type: string
+        required: true
+        description: 
+        example: |
+            pkEmployee
+      order: 
+        type: string
+        required: true
+        description: 
+        example: |
+            asc
+  get:
+    description: Get the employee and plan assignments listing.
+/api/1/placement/benefitgroup/download?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/placement/benefitgroup/upload?placementId={placementId}&excelUrl={excelUrl}&effectiveDate={effectiveDate}&isOverWrite={isOverWrite}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+      excelUrl: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      effectiveDate: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      isOverWrite: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/placement/download?entityId={entityId}&placementId={placementId}&fileType={fileType}:
+  uriParameters: 
+      entityId: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      fileType: 
+        type: string
+        required: true
+        description: pdf or excel
+        example: |
+            pdf
+  get:
+    description: Download the existing placement file.
+/api/1/placement/group/create?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/placement/group/delete?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/1/placement/group/update?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/placement/group/VolPlanEligibilty:
+  get:
+    description: 
+/api/1/placement/group?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/placement/placementDetail?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: Get Placement Detail
+/api/1/placement/placementList?entityIds={entityIds}&placementIds={placementIds}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementIds: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  get:
+    description: Get the placement listing.
+/api/1/placement/price/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          placementPrice: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/placement/price?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/placement/productSummary/update:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          placementProductSummary: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/placement/productSummary?placementId={placementId}:
+  uriParameters: 
+      placementId: 
+        type: integer
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/placement/upload?entityIds={entityIds}&excelUrl={excelUrl}&pdfUrl={pdfUrl}&excelName={excelName}&pdfName={pdfName}&placementId={placementId}&ignoreWarning={ignoreWarning}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      excelUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      pdfUrl: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      excelName: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      pdfName: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+      placementId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+      ignoreWarning: 
+        type: string
+        required: true
+        description: 
+        example: |
+            
+  post:
+    description: Upload for a new placement or replace the existing placement.
+/api/1/shop/offer:
+  get:
+    description: 
+/api/1/shop/offer/{offerId}:
+  uriParameters: 
+      offerId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/shop/purchased:
+  get:
+    description: 
+/api/1/user/companies/{userPath}?locale={locale}:
+  uriParameters: 
+      userPath: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      locale: 
+        type: string
+        required: true
+        description: 
+        example: |
+            en
+  get:
+    description: 
+/api/1/user/findEmployee?entityIds={entityIds}&id={id}:
+  uriParameters: 
+      entityIds: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      id: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/user/login:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          creds: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/password/change:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/password/complete-reset:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/user/password/initiate-reset:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          request: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/advancedScreenResult:
+  get:
+    description: 
+/api/1/wellness/age:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/agingStatus?riskDomain={riskDomain}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellness/basicScreenInput:
+  get:
+    description: 
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/basicScreenPrint:
+  get:
+    description: 
+/api/1/wellness/basicScreenResult:
+  get:
+    description: 
+/api/1/wellness/dashboard:
+  get:
+    description: 
+/api/1/wellness/ethnicity:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/goal/{riskDomain}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellness/goal/{riskDomain}/{goalId}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      goalId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+  delete:
+    description: 
+/api/1/wellness/goal/{riskDomain}/{goalId}/stat?viewFilter={viewFilter}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      goalId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      viewFilter: 
+        type: string
+        required: true
+        description: 
+        example: |
+            week
+  get:
+    description: 
+/api/1/wellness/goal/{riskDomain}/{goalId}/track:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      goalId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/goal/{riskDomain}/{goalId}/track?viewFilter={viewFilter}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      goalId: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      viewFilter: 
+        type: string
+        required: true
+        description: 
+        example: |
+            week
+  get:
+    description: 
+/api/1/wellness/hraInput?isComplete={isComplete}&sectionTag={sectionTag}:
+  uriParameters: 
+      isComplete: 
+        type: boolean
+        required: false
+        description: 
+        example: |
+            
+      sectionTag: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/hraInput?sectionId={sectionId}:
+  uriParameters: 
+      sectionId: 
+        type: integer
+        required: true
+        description: 
+        example: |
+            0
+  get:
+    description: 
+/api/1/wellness/hraPhotoUpload:
+  get:
+    description: 
+/api/1/wellness/hraResult:
+  get:
+    description: 
+/api/1/wellness/hraResult/{riskDomain}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellness/image?id={id}:
+  uriParameters: 
+      id: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/1/wellness/reage:
+  post:
+    description: 
+    body:
+      application/x-www-form-urlencoded:: 
+        formParameters: 
+          data: 
+            description  : 
+            type  : string
+            required  : false
+            example  : 
+/api/1/wellness/uploadImage:
+  post:
+    description: 
+/api/1/wellness/usergoals/{riskDomain}:
+  uriParameters: 
+      riskDomain: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/BlobFiles/Files?path={path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/CreateEmployeeReferalLetter?employeeid={employeeid}&dependentid={dependentid}&name={name}&description={description}&referredby={referredby}&referraldate={referraldate}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      name: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      description: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      referredby: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      referraldate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/Claim1/ExportGHSClaim?claimappliedid={claimappliedid}:
+  uriParameters: 
+      claimappliedid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/Claim1/GetClaimantID?employeeid={employeeid}&dependentid={dependentid}&name={name}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      name: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetClaimFormFieldLabel?claimtypeid={claimtypeid}:
+  uriParameters: 
+      claimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetEligibleClaimant?employeeid={employeeid}&claimtypeid={claimtypeid}&insuranceincurreddate={insuranceincurreddate}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      insuranceincurreddate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetEligibleClaimType?employeeid={employeeid}&dependentid={dependentid}&policyclaimtypeid={policyclaimtypeid}&incurreddate={incurreddate}&claimreasonid={claimreasonid}&editClaimKey={editClaimKey}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      policyclaimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      incurreddate: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimreasonid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      editClaimKey: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetGHSViewReferral?referralletterid={referralletterid}:
+  uriParameters: 
+      referralletterid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetInsuranceClaimPrintOut?claimid={claimid}:
+  uriParameters: 
+      claimid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetInsuranceDiagnosis?employeeid={employeeid}&dependentid={dependentid}&claimtypeid={claimtypeid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetInsuranceEligibleClaimType?employeeid={employeeid}&dependentid={dependentid}&claimtypeid={claimtypeid}&insuranceincurreddate={insuranceincurreddate}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      insuranceincurreddate: 
+        type: date
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetInsuranceHopitals?employeeid={employeeid}&dependentid={dependentid}&claimtypeid={claimtypeid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetInsuranceReferralLetter?employeeid={employeeid}&dependentid={dependentid}&claimtypeid={claimtypeid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetLogList?employeeid={employeeid}&dependentid={dependentid}&policyclaimtypeid={policyclaimtypeid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      policyclaimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetReferralLetterLabel?employeeid={employeeid}&dependentid={dependentid}&policyclaimtypeid={policyclaimtypeid}&claimant={claimant}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      policyclaimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      claimant: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetReferralLetterList?employeeid={employeeid}&dependentid={dependentid}&policyclaimtypeid={policyclaimtypeid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      policyclaimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetRetrieveHospitalType/{id}?employeeid={employeeid}&dependentid={dependentid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      id: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetRetrieveLog?employeeid={employeeid}&dependentid={dependentid}&logid={logid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      logid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetRetrieveReferralLetter/{id}?employeeid={employeeid}&dependentid={dependentid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      id: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetServiceProvider?employeeid={employeeid}&dependentid={dependentid}&policyclaimtypeid={policyclaimtypeid}:
+  uriParameters: 
+      employeeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      dependentid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      policyclaimtypeid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/GetSettlementPrintOut?settlementurl={settlementurl}&settlementid={settlementid}:
+  uriParameters: 
+      settlementurl: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      settlementid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/Claim1/SaveEmployeeReferalLetterReference?filename={filename}&referralid={referralid}:
+  uriParameters: 
+      filename: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+      referralid: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  post:
+    description: 
+/api/ClientFiles/Files?path={path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/api/EmployeeCensus1/GetAppContextAction:
+  get:
+    description: 
+/api/NotFound/Files?path={path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 
+/clients/{path}:
+  uriParameters: 
+      path: 
+        type: string
+        required: false
+        description: 
+        example: |
+            
+  get:
+    description: 

@@ -1,0 +1,19 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Update File</h3>
+        </div>
+        <div class="modal-body">
+            <span data-bind="text:id" style="display:none;"></span>
+            <div id="fileUploaded" class="dropzone dz-clickable" data-bind="jqueryui:{ widget: 'dropzone', options:{ maxFiles: 1 , url:'https://ystest.azurewebsites.net/api/1/file/update?id='+id()} }">
+                <div class="dz-message">
+                    <strong>Update Unit Test Document (.xls)</strong>
+                    <br>
+                    <u>Drop files here or click to upload.</u>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <center><button class="btn btn-green" data-bind="click: cancel">Close</button></center>
+        </div </div>
+    </div>
