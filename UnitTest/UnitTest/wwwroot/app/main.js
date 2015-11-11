@@ -42,7 +42,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap', 
     system.debug(true);
     //>>excludeEnd("build");
 
-    app.title = 'Stress & Unit Test';
+    app.title = 'Cakifty';
 
     app.configurePlugins({
         router: true,
